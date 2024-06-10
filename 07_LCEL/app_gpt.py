@@ -31,7 +31,7 @@ essay_prompt = PromptTemplate(
 
     {title}
 
-    Make sure that the essay is engaging and make the reader feel excited.
+    Make sure that the essay is engaging and makes the reader feel excited.
     """,
 )
 

@@ -90,7 +90,8 @@ question = st.chat_input("Your Question: ")
 if question:
     with st.chat_message("user"):
         st.markdown(question)
-    response = conversational_rag_chain.stream(
+    answer_chain = conversational_rag_chain.pick("answer")
+    response = answer_chain.stream(
         {"input": question}, config={"configurable": {"session_id": "any"}}
     )
     with st.chat_message("assistant"):

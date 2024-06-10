@@ -31,7 +31,7 @@ essay_prompt = PromptTemplate(
 
     {title}
 
-    Make sure that the essay is engaging and make the reader feel {emotion}.
+    Make sure that the essay is engaging and makes the reader feel {emotion}.
 
     Format the output as a JSON object with three keys: 'title', 'emotion', 'essay' and fill them with respective values
     """,
