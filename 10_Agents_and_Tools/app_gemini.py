@@ -30,14 +30,14 @@ if question:
             # Agent Action
             if "actions" in response:
                 for action in response["actions"]:
-                    st.write_stream(f"Calling Tool: `{action.tool}` with input `{action.tool_input}`")
+                    st.write(f"Calling Tool: `{action.tool}` with input `{action.tool_input}`")
             # Observation
             elif "steps" in response:
                 for step in response["steps"]:
-                    st.write_stream(f"Tool Result: `{step.observation}`")
+                    st.write(f"Tool Result: `{step.observation}`")
             # Final result
             elif "output" in response:
-                st.write_stream(f'Final Output: {response["output"]}')
+                st.write(f'Final Output: {response["output"]}')
             else:
                 raise ValueError()
-            st.write_stream("---")
+            st.write("---")

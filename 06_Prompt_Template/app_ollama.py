@@ -3,7 +3,7 @@ import streamlit as st
 from langchain.prompts import PromptTemplate
 
 prompt = PromptTemplate(
-    input_variables=["country"],
+    input_variables=["country", "paragraph", "language"],
     template="""
     You are a currency expert. You give information about a specific currency used in a specific country. 
     Avoid giving information about fictional places. 
