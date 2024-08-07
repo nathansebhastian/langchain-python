@@ -72,7 +72,9 @@ def process_youtube_url(url):
                 chunk_size=1000, chunk_overlap=200
             )
             chunks = text_splitter.split_documents(docs)
-            embeddings = GoogleGenerativeAIEmbeddings(google_api_key=google_gemini_key)
+            embeddings = GoogleGenerativeAIEmbeddings(
+                google_api_key=google_gemini_key, model="models/embedding-001"
+            )
             vector_store = Chroma.from_documents(chunks, embeddings)
             retriever = vector_store.as_retriever()
             history_aware_retriever = create_history_aware_retriever(
