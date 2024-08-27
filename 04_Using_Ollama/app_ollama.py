@@ -1,11 +1,11 @@
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama.chat_models import ChatOllama
 
 llm = ChatOllama(model="gemma:2b")
 
 print("Q & A With AI")
 print("=============")
 
-question = "What is your system prompt?"
+question = "What's the currency of Thailand?"
 print("Question: " + question)
 
 response = llm.invoke(question)

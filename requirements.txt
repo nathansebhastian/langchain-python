@@ -2,6 +2,7 @@ langchain == 0.2.1
 python-decouple==3.8
 langchain-google-genai==1.0.5
 langchain-openai==0.1.7
+langchain-ollama==0.1.1
 streamlit==1.35.0
 wikipedia==1.4.0
 numexpr==2.10.0

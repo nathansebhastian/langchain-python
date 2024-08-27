@@ -2,7 +2,7 @@ from langchain import hub
 import streamlit as st
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_community.agent_toolkits.load_tools import load_tools
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama.chat_models import ChatOllama
 
 llm = ChatOllama(model="mistral")
 

@@ -1,5 +1,5 @@
 from decouple import config
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama.chat_models import ChatOllama
 import streamlit as st
 
 # Adding History

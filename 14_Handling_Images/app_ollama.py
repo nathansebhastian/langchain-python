@@ -1,4 +1,4 @@
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama.chat_models import ChatOllama
 import streamlit as st
 
 # Adding History
@@ -19,7 +19,10 @@ prompt = ChatPromptTemplate.from_messages(
                 {"type": "text", "text": "{input}"},
                 {
                     "type": "image_url",
-                    "image_url": f"data:image/jpeg;base64,""{image}",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64," "{image}",
+                        "detail": "low",
+                    },
                 },
             ],
         ),
